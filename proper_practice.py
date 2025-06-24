@@ -2,6 +2,16 @@
 # Group Members - Ivan Ivanov, Grishma Howale
 
 # Practices Displayed: Documentation, KISS, DRY, and Single Responsibility
+#
+# KISS Principle is being used by using a switch case, and the print statements
+# immediately jump into the functions without an extra line for variables.
+#
+# Single Responsibility is being used by splitting the project into multiple functions which do one
+# task each. Main prompts the user and displays their outcome, the rest of the project is split up.
+#
+# DRY (Don't Repeat Yourself) is being displayed here by grabbing user input once, and using a loop instead
+# of repeating the prompt over and over. Each line here is required with no additional lines.
+
 
 def user_input():
     x = int(input("Please enter a number: "))
@@ -9,8 +19,10 @@ def user_input():
 
 def addition(a, b):
     return a + b
+
 def subtraction(a, b):
     return a - b
+
 def multiplication(a, b):
     return a * b
 
