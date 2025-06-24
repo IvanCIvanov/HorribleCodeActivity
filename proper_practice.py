@@ -11,23 +11,30 @@
 #
 # DRY (Don't Repeat Yourself) is being displayed here by grabbing user input once, and using a loop instead
 # of repeating the prompt over and over. Each line here is required with no additional lines.
+#
+# Documentation means every function in the documentation has a clear label with comments outlining its purpose.
+# These comments make the code easy to read, maintain, and expand.
 
 
+#Promots the user should enter a number which gets returned
 def user_input():
     x = int(input("Please enter a number: "))
     return x
 
+#Returns sum of two numbers
 def addition(a, b):
     return a + b
 
+#Returns difference of two numbers
 def subtraction(a, b):
     return a - b
 
+#Returns product of two numbers
 def multiplication(a, b):
     return a * b
 
 
-
+# In main function, displays menu, get user input, displays results
 def main():
     print("Please select an option:\n")
     print("1. Addition\n")
@@ -47,3 +54,9 @@ running = True
 while running:
     main()
     running = bool(input("\nDo you want to continue? (y/n): "))
+
+    # Check to make sure if user typed other than 'y'
+    choice = input("Please confirm again to continue? (y/n): ").lower()
+    if choice != 'y':
+        running = False
+        print("Thank you for using the calculator!")
